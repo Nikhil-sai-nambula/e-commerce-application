@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /ecommerce
 
 # Copy the JAR file from the target directory into the container
 COPY target/ecommerce-0.0.1-SNAPSHOT.jar app.jar
