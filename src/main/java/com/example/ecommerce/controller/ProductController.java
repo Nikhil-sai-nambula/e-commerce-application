@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.ecommerce.domain.Product;
+import com.example.ecommerce.model.Product;
 import com.example.ecommerce.service.ProductService;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class ProductController {
 	
 	@Autowired
