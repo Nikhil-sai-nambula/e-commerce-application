@@ -96,7 +96,7 @@ public class AuthController {
 		}
 
 		String jwtToken = jwtUtil.generateToken(loginRequest.getEmail());
-		AuthResponse authResponse = new AuthResponse(user.getName(), user.getEmail(), jwtToken, user.getId());
+		AuthResponse authResponse = new AuthResponse(user.getName(), user.getEmail(), jwtToken, user.getId(), user.getRole());
 		return ResponseEntity.ok(authResponse);
 	}
 

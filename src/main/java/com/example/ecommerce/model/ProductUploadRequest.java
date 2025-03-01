@@ -2,24 +2,18 @@ package com.example.ecommerce.model;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
-@NoArgsConstructor
+
+@Data
 @AllArgsConstructor
-@ToString
-@Document(collection = "Product")
-public class Product {
+@NoArgsConstructor
+public class ProductUploadRequest {
 
-	@Id
 	private String id;
 
 	private String name;
@@ -28,12 +22,12 @@ public class Product {
 
 	private String category;
 
-	private List<String> imageURL;
+	private List<MultipartFile> imageURL;
 
 	private String description;
-	
+
 	private long ratings;
-	
+
 	private long TotalRatings;
 
 	private boolean onSale;
@@ -41,7 +35,7 @@ public class Product {
 	private double price;
 
 	private double discountPercentage;
-	
+
 	private String sellerId;
 
 }

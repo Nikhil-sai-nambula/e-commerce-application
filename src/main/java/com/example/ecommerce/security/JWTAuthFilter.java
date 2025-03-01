@@ -28,9 +28,6 @@ public class JWTAuthFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-//        response.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
-//        response.setHeader("Access-Control-Allow-Credentials", "true");
-
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);

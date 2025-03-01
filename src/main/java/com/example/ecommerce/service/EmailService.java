@@ -33,7 +33,7 @@ public class EmailService {
 
 	public void sendSimpleEmail(String email, String otp) {
 //		String htmlContent = "<html>" + "<head><style>h1 {color: #4CAF50;}</style></head>" + "<body>"
-//				+ "<h1>Welcome to Our Inshop!</h1>" + "<h3>One stop for a great Experience</h3>" + "<p>Your OTP is: <strong>" + otp + "</strong></p>"
+//				+ "<h1>Welcome to Our ShopVerse!</h1>" + "<h3>One stop for a great Experience</h3>" + "<p>Your OTP is: <strong>" + otp + "</strong></p>"
 //				+ "<p>Please use this OTP to verify your email address.</p>" + "</body>" + "</html>";
 
 		String htmlContent = "<!DOCTYPE html>" +
@@ -57,7 +57,7 @@ public class EmailService {
 				"<body>" +
 				    "<div class='container'>" +
 				        "<div class='header'>" +
-				            "<h1>Welcome to Inshop</h1>" +
+				            "<h1>Welcome to ShopVerse</h1>" +
 				        "</div>" +
 				        "<div class='content'>" +
 				            "<h2 style='color: #333333; margin-bottom: 25px;'>Email Verification Required</h2>" +
@@ -71,8 +71,8 @@ public class EmailService {
 				            "</p>" +
 				        "</div>" +
 				        "<div class='footer'>" +
-				            "<p>Need help? Contact our support team at support@inshop.com</p>" +
-				            "<p>© 2025 Inshop. All rights reserved.</p>" +
+				            "<p>Need help? Contact our support team at support@ShopVerse.com</p>" +
+				            "<p>© 2025 ShopVerse. All rights reserved.</p>" +
 				        "</div>" +
 				    "</div>" +
 				"</body>" +

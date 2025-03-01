@@ -1,7 +1,9 @@
 package com.example.ecommerce.security;
 
+import java.util.Collection;
 import java.util.Collections;
 
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,10 +28,18 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User not found: " + email);
         }
+        String role = "ROLE_USER";
+        
+        if (user.getRole() != null) {
+        	role = user.getRole();
+        }
+        
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(),
                 user.getPassword(),
-                Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))
+                
+                Collections.singleton(new SimpleGrantedAuthority(role))
         );
     }
+    
 }
